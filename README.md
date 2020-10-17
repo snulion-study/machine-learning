@@ -28,4 +28,8 @@
 
 ## Study 자료
 
-[week4](./week4/week4.md)
+[Week 1, 2 - Introduction to deep learning, Neural Networks Basics](./week2/week2.md)
+
+[Week 3 - Shallow neural networks](./week3/week3.md)
+
+[Week 4 - Deep Neural Networks](./week4/week4.md)

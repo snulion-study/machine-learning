@@ -1,4 +1,4 @@
-# 4. Deep Neural Network
+# Week 4. Deep Neural Network
 
 by | 상원 
 pub date | 2020.10.17.Sat
