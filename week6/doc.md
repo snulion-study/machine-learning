@@ -1,6 +1,6 @@
 # Week 6
 
-#### Mini-batch gradient descent
+## Mini-batch gradient descent
 
 ![image-20201101210219218](doc.assets/image-20201101210219218.png)
 
@@ -14,7 +14,7 @@
 
 
 
-#### Understanding mini-batch gradient descent
+## Understanding mini-batch gradient descent
 
 **stochastic gradient descent** VS **batch gradient descent**
 
@@ -37,7 +37,7 @@
 
 
 
-#### Exponentially weighted averages
+## Exponentially weighted averages
 
 ![image-20201101211125331](doc.assets/image-20201101211125331.png)
 
@@ -46,9 +46,9 @@
 - 시간이 지날 수록 오래 전 입력 값의 영향이 줄어든다
 - 모든 데이터를 메모리에 저장하는 것보다 메모리 부담이 준다 -> markov matrix?
 
-#### 
 
-#### Bias correction in exponentially weighted averages
+
+## Bias correction in exponentially weighted averages
 
 ![image-20201101211857205](doc.assets/image-20201101211857205.png)
 
@@ -57,7 +57,7 @@
 
 
 
-#### Gradient descent with momentum
+## Gradient descent with momentum
 
 ![image-20201101212008777](doc.assets/image-20201101212008777.png)
 
@@ -69,11 +69,11 @@
 
 
 
-#### RMSprop
+## RMSprop
 
 ![image-20201101212658553](doc.assets/image-20201101212658553.png)
 
-#### Adam optimization algorithm
+## Adam optimization algorithm
 
 - exponentially weighted averages
 
@@ -89,7 +89,7 @@
 
 ![figure1](doc.assets/optimizers_figure1.png)
 
-#### Learning rate decay
+## Learning rate decay
 
 ![image-20201101215809816](doc.assets/image-20201101215809816.png)
 
@@ -113,7 +113,7 @@ learning_step = (
 
 
 
-#### The problem of local optima
+## The problem of local optima
 
 ![image-20201101220417779](doc.assets/image-20201101220417779.png)
 
