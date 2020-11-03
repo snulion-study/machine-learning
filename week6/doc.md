@@ -73,19 +73,107 @@
 
 ![image-20201101212658553](doc.assets/image-20201101212658553.png)
 
+
+
+```python
+# Stochastic Gradient Descent
+def SGD():
+    w, b = init_w, init_b
+    
+    for i in range(max_epochs):
+        dw, db = 0, 0
+        
+        w = w - (learning_rate * grad_w(w, b, x, y))
+        b = b - (learning_rate * grad_b(w, b, x, y))
+```
+
+```python
+# RMSProp
+def do_rmsprop():
+    w, b, eta = init_w, init_b, 0.1
+    v_w, v_b, beta, eps = 0, 0, 0.9, 1e-8
+    
+    for i in range(max_epochs):
+        dw, db = 0, 0
+        for x,y in zip(X,Y):
+            dw += grad_w(w, b, x, y)
+            db += grad_b(w, b, x, y)
+
+        v_w = beta * v_w + (1 - beta) * dw**2
+        v_b = beta * v_b + (1 - beta) * db**2
+
+        w = w - (eta/np.sqrt(v_w + eps)) * dw
+        b = b - (eta/np.sqrt(v_b + eps)) * db
+```
+
+
+
+```python
+tf.keras.optimizers.RMSprop(
+    learning_rate=0.001, rho=0.9, momentum=0.0, epsilon=1e-07, centered=False,
+    name='RMSprop', **kwargs
+)
+```
+
+https://github.com/tensorflow/tensorflow/blob/v2.3.1/tensorflow/python/keras/optimizer_v2/rmsprop.py#L35-L298
+
+
+
 ## Adam optimization algorithm
 
 - exponentially weighted averages
 
-![image-20201101213735171](doc.assets/image-20201101213735171.png)
+![image-20201103203338703](doc.assets/image-20201103203338703.png)
 
-- bias-correction
+- bias-correction![image-20201103203355188](doc.assets/image-20201103203355188.png)
 
-![image-20201101213742312](doc.assets/image-20201101213742312.png)
+  ![image-20201103203414021](doc.assets/image-20201103203414021.png)
 
-![image-20201101213751915](doc.assets/image-20201101213751915.png)
+```python
+# Adam
+def do_adam():
+	w, b, eta, max_epochs = 1, 1, 0.01, 100, 
+    m_w, m_b, v_w, v_b, eps, beta1, beta2 = 0, 0, 0, 0, 1e-8, 0.9, 0.99
+    
+	for i in range(max_epochs):
+		dw, db = 0, 0
+		for x,y in data:
+			dw += grad_w(w, b, x, y)
+			db += grad_b(w, b, x, y)
+		m_w = beta1 * m_w + (1-beta1) * dw
+		m_b = beta1 * m_b + (1-beta1) * db
+		
+		v_w = beta2 * v_w + (1-beta2) * dw**2
+		v_b = beta2 * v_b + (1-beta2) * db**2
+		
+		m_w = m_w/(1-beta1**(i+1))
+		m_b = m_b/(1-beta1**(i+1))
+		
+		v_w = v_w/(1-beta2**(i+1))
+		v_b = v_b/(1-beta2**(i+1))
+			
+		w = w - eta * m_w/np.sqrt(v_w + eps)
+		b = b - eta * m_b/np.sqrt(v_b + eps)
+```
+
+
+
+```python
+tf.keras.optimizers.Adam(
+    learning_rate=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-07, amsgrad=False,
+    name='Adam', **kwargs
+)
+```
+
+https://github.com/tensorflow/tensorflow/blob/v2.3.1/tensorflow/python/keras/optimizer_v2/adam.py#L34-L252
+
+
 
 기타 여러가지 optimizer 에 관한 [이 사이트를](https://hiddenbeginner.github.io/deeplearning/2019/09/22/optimization_algorithms_in_deep_learning.html#Adam) 참고해도 좋을 것 같다!
+
+
+
+
 
 ![figure1](doc.assets/optimizers_figure1.png)
 
@@ -121,3 +209,14 @@ learning_step = (
 - 우리가 원하는 Goal 에 도달하기 위해서 learning rate decay 등을 사용
 - 고차원에서는, saddle point 에서 효과적으로 빠져나오지 못하는 경우가 있음
 - 이 때, Adam 이나 RMSProp 등이 빠져나올 수 있도록 도와줌
+
+
+
+## 실습(?)
+
+
+
+
+
+https://www.tensorflow.org/tutorials?hl=ko
+
