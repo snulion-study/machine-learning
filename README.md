@@ -12,6 +12,10 @@
 
 [Week 6 - Optimization algorithms](./week6/doc.md)
 
+## 실습 자료
+
+https://www.tensorflow.org/tutorials?hl=ko
+
 ## 발제자 순서
 
 + 9/12    
