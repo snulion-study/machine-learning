@@ -1,7 +1,7 @@
 # Batch normalization
 
 deep learning에는 여러 번의 계단식 발전이 있었습니다.  
-첫 번째는 ReLU의 발견이죠. activation function의 성능을 비약적으로 끌어올렸습니다.
+첫 번째는 ReLU의 발견이죠. activation function의 성능을 비약적으로 끌어올렸습니다.  
 두 번째는 CNN layer입니다. CNN은 아직도 대다수의 deeplearning network에서 압도적인 성능을 뽐내고 있습니다.  
 세 번째는 Adam을 비롯한 optimization function입니다. 초기 deep learning은 hyperparameter를 찾는 것이 굉장히 어려웠는데, 이 문제를 빠르게 해결해 줄 수 있게 되었습니다.  
 물론 이외에도 다양한 발전들이 많았습니다. 하지만 오늘 시간에는 그 중에서도 network가 엄청나게 빠른 속도로 학습하는 것을 도와주는, Batch Normalization에 대해 알아보겠습니다.  
