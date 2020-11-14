@@ -26,9 +26,9 @@ https://www.tensorflow.org/tutorials?hl=ko
 + 10/17  (휴식)
 + 10/24  5주차  : 영준 
 + 10/31  6주차  : 은주 -> 상원 (Improving Deep Neural Networks - week 2)
-+ 11/7   7주차  : 재경 (Improving Deep Neural Networks - week 3)
-+ 11/14  8주차  : 은주 (Convolutional Neural Networks - week 1)
-+ 11/21  9주차  : 
++ 11/7   7주차  : 
++ 11/14  8주차  : 재경 (Improving Deep Neural Networks - week 3)
++ 11/21  9주차  : 은주 (Convolutional Neural Networks - week 1)
 + 11/28  10주차 : 
 + 12/5   11주차 : 
 + 12/12  12주차 :
