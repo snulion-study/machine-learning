@@ -12,6 +12,8 @@
 
 [Week 6 - Optimization algorithms](./week6/doc.md)
 
+[Week 8 - Convolutional Neural Networks](./week8/Cnn.md)
+
 ## 실습 자료
 
 https://www.tensorflow.org/tutorials?hl=ko
